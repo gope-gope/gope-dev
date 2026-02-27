@@ -1,3 +1,5 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="mt-16 border-t border-border-subtle bg-background/80">
@@ -11,23 +13,26 @@ const Footer = () => {
             href="https://github.com/gope-gope"
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-foreground"
+            className="inline-flex items-center gap-1.5 transition hover:text-foreground"
           >
-            GitHub
+            <Github className="h-4 w-4" aria-hidden="true" />
+            <span>GitHub</span>
           </a>
           <a
             href="https://www.linkedin.com/in/georgi-georgiev-1b3554162/"
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-foreground"
+            className="inline-flex items-center gap-1.5 transition hover:text-foreground"
           >
-            LinkedIn
+            <Linkedin className="h-4 w-4" aria-hidden="true" />
+            <span>LinkedIn</span>
           </a>
           <a
             href="mailto:georgigeorgiew97@gmail.com"
-            className="transition hover:text-foreground"
+            className="inline-flex items-center gap-1.5 transition hover:text-foreground"
           >
-            Email
+            <Mail className="h-4 w-4" aria-hidden="true" />
+            <span>Email</span>
           </a>
         </div>
       </div>
