@@ -1,4 +1,11 @@
 import { Moon, SunMedium } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useTheme } from "../hooks/useTheme";
 
 const Header = () => {
@@ -24,19 +31,29 @@ const Header = () => {
             </a>
           </nav>
 
-          <div className="flex items-center gap-2">
-            <select
-              aria-label="Color palette"
+          <div className="flex items-center gap-2 ">
+            <Select
               value={palette}
-              onChange={(e) =>
-                setPalette(e.target.value as "professional" | "cyberpunk" | "playful")
+              onValueChange={(value) =>
+                setPalette(value as "professional" | "cyberpunk" | "playful")
               }
-              className="hidden rounded-md border border-border-subtle bg-surface px-2 py-1 text-xs text-muted-foreground shadow-sm outline-none ring-primary/20 transition hover:text-foreground focus-visible:ring-2 sm:inline-block"
             >
-              <option value="professional">Professional</option>
-              <option value="cyberpunk">Cyberpunk</option>
-              <option value="playful">Playful</option>
-            </select>
+              <SelectTrigger
+                aria-label="Color palette"
+                size="sm"
+                className="hidden bg-surface text-xs text-muted-foreground sm:inline-flex"
+              >
+                <SelectValue
+                  placeholder="Palette"
+                  aria-label={`Current palette: ${palette}`}
+                />
+              </SelectTrigger>
+              <SelectContent position="popper">
+                <SelectItem value="professional">Professional</SelectItem>
+                <SelectItem value="cyberpunk">Cyberpunk</SelectItem>
+                <SelectItem value="playful">Playful</SelectItem>
+              </SelectContent>
+            </Select>
 
             <button
               type="button"

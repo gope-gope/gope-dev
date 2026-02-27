@@ -44,8 +44,8 @@ function App() {
                 Backend & tooling
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Node.js, NestJS, REST APIs, authentication, testing, and
-                tooling that keeps DX fast and reliable.
+                Node.js, NestJS, REST APIs, authentication, testing, and tooling
+                that keeps DX fast and reliable.
               </p>
             </div>
           </div>
