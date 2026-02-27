@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gope-gope.github.io/portfolio-app",
+  "homepage": "https://gope-gope.github.io/",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc -b && vite build",
