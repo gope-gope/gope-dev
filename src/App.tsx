@@ -36,7 +36,7 @@ function App() {
         </div>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-zinc-50">
-          Vite + React
+          Vite + Reactt
         </h1>
 
         <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.04)]">
