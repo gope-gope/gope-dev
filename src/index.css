@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+  }
+
+  a {
+    @apply font-medium text-indigo-300 hover:text-indigo-200;
+  }
+}
