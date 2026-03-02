@@ -16,7 +16,9 @@ const AboutMe = () => {
     >
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section Header */}
-        <h2 className="text-5xl font-bold text-center">About Me</h2>
+        <h2 className="text-5xl font-bold text-center text-primary">
+          About Me
+        </h2>
 
         {/* Content */}
         <div className="items-center">

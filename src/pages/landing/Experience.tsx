@@ -55,7 +55,7 @@ const DATA = [
     ],
   },
   {
-    title: "Miscellaneous Projects",
+    title: "Other Projects",
     date: "2021 – 2022",
     content:
       "I have contributed as a frontend developer across a variety of projects, including NFT drop dApps, NFT marketplaces, Web3 freelance work for gaming platforms, an e-commerce MVP for a leading automotive brand, healthcare platforms, and personal side projects such as a travel agency app. These projects involved building responsive and performant user interfaces, integrating Web3 functionalities, working with APIs, and delivering scalable, maintainable code across multiple domains.",

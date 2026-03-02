@@ -139,7 +139,7 @@ const Stack = () => {
                       className="flex flex-col gap-2 items-center"
                     >
                       {skill.isSvg ? (
-                        <skill.Icon width={64} height={"auto"} />
+                        <skill.Icon width={64} height={64} />
                       ) : (
                         <img
                           className="w-[64px] h-[64px]"

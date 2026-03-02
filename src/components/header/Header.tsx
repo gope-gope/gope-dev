@@ -12,6 +12,7 @@ import HeaderNav from "./Navigation";
 import MobileMenuButton from "./mobile/MobileMenuButton";
 import MobileMenu from "./mobile/MobileMenu";
 import Backdrop from "./mobile/Backdrop";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,9 +22,12 @@ const Header = () => {
     <header className="sticky top-0 z-20 border-b border-border-subtle bg-background/80 backdrop-blur">
       <div className="relative mx-auto max-w-7xl h-[80px]">
         <div className="relative z-50 flex items-center justify-between bg-background/80 px-6 py-4 backdrop-blur h-full">
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <Link
+            to="/"
+            className="text-sm font-semibold uppercase tracking-[0.2em] text-primary"
+          >
             Georgi Georgiev
-          </span>
+          </Link>
 
           <div className="flex items-center gap-4 sm:gap-6">
             <div className="hidden md:block">

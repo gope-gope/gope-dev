@@ -4,19 +4,9 @@ import { Swiper as SwiperType } from "swiper";
 // @ts-expect-error accept that it's imported correctly
 import "swiper/css";
 
-import Project1 from "/project1.jpg";
-import Project2 from "/project2.jpg";
-import Project3 from "/project3.jpg";
-import Project4 from "/project4.jpg";
+import { projects } from "@/pages/project/projects";
 import ProjectCard from "./components/ProjectCard";
 import NavArrow from "./components/NavArrow";
-
-const projects = [
-  { title: "E-Commerce Platform", image: Project1 },
-  { title: "SaaS Dashboard", image: Project2 },
-  { title: "Creative Agency", image: Project3 },
-  { title: "AI Startup", image: Project4 },
-];
 
 const Work = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -41,7 +31,7 @@ const Work = () => {
           grabCursor={true}
         >
           {projects.map((project) => (
-            <SwiperSlide key={project.title}>
+            <SwiperSlide key={project.id}>
               <ProjectCard project={project} />
             </SwiperSlide>
           ))}
