@@ -8,7 +8,15 @@ const ProjectPage = () => {
   const project = getProject(projectId);
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+    const html = document.documentElement;
+    const prevScrollBehavior = html.style.scrollBehavior;
+
+    html.style.scrollBehavior = "auto"; // disable smooth scrolling
+    html.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    // Restore smooth scrolling
+    html.style.scrollBehavior = prevScrollBehavior;
   }, []);
 
   if (!project) {

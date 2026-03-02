@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import MyFace from "/hero-me.png";
-
 export default function Hero() {
   const [show, setShow] = useState(false);
 
@@ -12,7 +11,6 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden ">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-blue-500/20 to-cyan-400/20 blur-3xl animate-pulse" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-16 grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE - TEXT */}
         <div
@@ -70,16 +68,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Custom Floating Animation */}
-      <style>
-        {`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        `}
-      </style>
     </section>
   );
 }

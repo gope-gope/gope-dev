@@ -3,7 +3,7 @@ import Experience from "./Experience";
 import Work from "./work/Work";
 import Stack from "./stack/Stack";
 import ContactMe from "./ContactMe";
-import Hero from "./Hero";
+import Hero from "./hero/Hero";
 
 const LandingPage = () => {
   return (
