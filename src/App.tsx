@@ -1,6 +1,5 @@
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Footer from "./components/Footer";
-
 import Hero from "./pages/landing/Hero";
 import Experience from "./pages/landing/Experience";
 import AboutMe from "./pages/landing/AboutMe";
@@ -13,7 +12,7 @@ function App() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <main className="mx-auto flex flex-col pb-16 pt-10">
+      <main className="mx-auto flex flex-col pb-16">
         <Hero />
         <AboutMe />
         <Experience />

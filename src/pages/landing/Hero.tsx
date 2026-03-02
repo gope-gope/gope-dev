@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import MyFace from "/hero-me.png";
-import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   const [show, setShow] = useState(false);
@@ -10,7 +9,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden -mt-[40px]">
+    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden ">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-blue-500/20 to-cyan-400/20 blur-3xl animate-pulse" />
 

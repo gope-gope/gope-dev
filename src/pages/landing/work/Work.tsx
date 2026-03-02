@@ -24,9 +24,9 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="relative w-full text-white py-24 overflow-hidden"
+      className="relative w-full text-white pt-36 overflow-hidden px-6 md:px-12"
     >
-      <div className="max-w-7xl mx-auto px-6 relative">
+      <div className="max-w-7xl mx-auto relative">
         <h2 className="text-5xl font-bold mb-16 text-primary text-right">
           Work
         </h2>

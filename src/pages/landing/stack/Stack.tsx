@@ -101,7 +101,10 @@ const Stack = () => {
   }, [active]);
 
   return (
-    <section id="stack" className="mx-auto py-24 max-w-4xl w-full">
+    <section
+      id="stack"
+      className="mx-auto pt-36 px-6 md:px-12 max-w-4xl w-full"
+    >
       <h2 className="text-5xl font-bold mb-16 text-center text-primary">
         {`{ Stack }`}
       </h2>

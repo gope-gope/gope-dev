@@ -23,7 +23,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 max-w-5xl w-full mx-auto pt-16 px-4"
+      className="scroll-mt-24 max-w-5xl w-full mx-auto pt-36 px-6 md:px-12"
     >
       <h2 className="text-2xl font-semibold tracking-tight">Contact me</h2>
       <p className="mt-3 text-sm text-muted-foreground">
