@@ -8,6 +8,29 @@ import {
 } from "@/components/ui/select";
 import { useTheme } from "../hooks/useTheme";
 
+const sectionLinks = [
+  {
+    name: "About",
+    link: "#about",
+  },
+  {
+    name: "Experience",
+    link: "#experience",
+  },
+  {
+    name: "Work",
+    link: "#work",
+  },
+  {
+    name: "Stack",
+    link: "#stack",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+  },
+];
+
 const Header = () => {
   const { theme, toggleTheme, palette, setPalette } = useTheme();
 
@@ -20,18 +43,11 @@ const Header = () => {
 
         <div className="flex items-center gap-4 sm:gap-6">
           <nav className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
-            <a href="#about-me" className="transition hover:text-primary">
-              About
-            </a>
-            <a href="#experience" className="transition hover:text-primary">
-              Experience
-            </a>
-            <a href="#work" className="transition hover:text-primary">
-              Work
-            </a>
-            <a href="#projects" className="transition hover:text-primary">
-              Contact
-            </a>
+            {sectionLinks.map((item) => (
+              <a href={item.link} className="transition hover:text-primary">
+                {item.name}
+              </a>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2 ">

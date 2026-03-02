@@ -101,8 +101,8 @@ const Stack = () => {
   }, [active]);
 
   return (
-    <section className="mx-auto my-20 max-w-4xl w-full">
-      <h2 className="text-3xl font-bold mb-8 text-center spacing-4">
+    <section id="stack" className="mx-auto py-24 max-w-4xl w-full">
+      <h2 className="text-5xl font-bold mb-16 text-center text-primary">
         {`{ Stack }`}
       </h2>
       <div className="space-y-4 w-full">

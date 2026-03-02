@@ -44,7 +44,7 @@ const Experience = () => {
       id="experience"
       className="min-h-screen p-16 max-w-7xl w-[100%] mx-auto"
     >
-      <h1 className="text-4xl font-extrabold mb-10">Experience</h1>
+      <h1 className="text-5xl font-extrabold mb-16 text-primary">Experience</h1>
 
       <div className="flex gap-20">
         {/* LEFT NAV */}

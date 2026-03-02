@@ -39,9 +39,9 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <Button>
-              <a href="#projects">View My Work </a>
-            </Button>
+            <a className="px-6 py-3" href="#work">
+              View My Work{" "}
+            </a>
 
             <a
               href="#contact"

@@ -4,11 +4,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const ContactMe = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [result, setResult] = useState<"Success!" | "Error!" | null>(null);
 
-  const handleContactSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "80b16fc3-6f91-4871-a26a-450ad4e61a44");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error!");
   };
 
   return (
@@ -23,7 +32,7 @@ const ContactMe = () => {
       </p>
 
       <form
-        onSubmit={handleContactSubmit}
+        onSubmit={onSubmit}
         className="mt-6 space-y-4 rounded-2xl border border-border-subtle bg-surface p-5"
       >
         <div className="space-y-1.5">
@@ -80,9 +89,13 @@ const ContactMe = () => {
             Send message
           </Button>
 
-          {submitted ? (
+          {result === "Success!" ? (
             <p className="text-xs text-muted-foreground">
               Thanks for reaching out — I&apos;ll respond soon.
+            </p>
+          ) : result === "Error!" ? (
+            <p className="text-xs text-muted-foreground">
+              Something went wrong. Please try again.
             </p>
           ) : null}
         </div>

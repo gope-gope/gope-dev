@@ -24,8 +24,8 @@ function NavArrow({
 
   return (
     <div
-      className={`absolute top-1/2 -translate-y-1/2 z-20 hidden md:block ${
-        isLeft ? "left-8" : "right-8"
+      className={`absolute top-[calc(50%+40px)] -translate-y-1/2 z-20 hidden md:block ${
+        isLeft ? "left-16" : "right-16"
       }`}
     >
       <div

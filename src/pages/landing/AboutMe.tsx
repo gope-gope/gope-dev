@@ -1,9 +1,6 @@
 const AboutMe = () => {
   return (
-    <section
-      id="about-me"
-      className="bg-gray-900 text-white py-24 px-6 md:px-16"
-    >
+    <section id="about" className="bg-gray-900 text-white py-24 px-6 md:px-16">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section Header */}
         <h2 className="text-5xl font-bold text-center">About Me</h2>
@@ -13,11 +10,11 @@ const AboutMe = () => {
           {/* Text */}
           <div className="space-y-6">
             <p className="text-lg md:text-xl leading-relaxed">
-              Hi, I’m <span className="font-semibold">George</span>, a frontend
-              developer passionate about building engaging and intuitive digital
-              experiences. Over the past few years, I’ve helped bring a variety
-              of projects to life — from innovative DeFi platforms and NFT
-              marketplaces to e-commerce experiences for leading brands.
+              I’m a frontend developer passionate about building engaging and
+              intuitive digital experiences. Over the past few years, I’ve
+              helped bring a variety of projects to life — from innovative DeFi
+              platforms and NFT marketplaces to e-commerce experiences for
+              leading brands.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">

@@ -32,6 +32,7 @@ const Work = () => {
         </h2>
 
         <Swiper
+          className="rounded-[16px]"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           spaceBetween={32}
           slidesPerView={2.5}
