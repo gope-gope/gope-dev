@@ -26,7 +26,7 @@ const Header = () => {
             to="/"
             className="text-sm font-semibold uppercase tracking-[0.2em] text-primary"
           >
-            Georgi Georgiev
+            G Georgiev
           </Link>
 
           <div className="flex items-center gap-4 sm:gap-6">
