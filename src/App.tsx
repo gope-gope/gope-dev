@@ -2,7 +2,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 import Hero from "./pages/landing/Hero";
 import Experience from "./pages/landing/Experience";
-import AboutMe from "./pages/landing/AboutMe";
+import AboutMe from "./pages/landing/about-me/AboutMe";
 import Work from "./pages/landing/work/Work";
 import ContactMe from "./pages/landing/ContactMe";
 import Stack from "./pages/landing/stack/Stack";
