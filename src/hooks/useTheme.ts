@@ -28,12 +28,12 @@ function getInitialTheme(): Theme {
 }
 
 function getInitialPalette(): Palette {
-  if (typeof window === "undefined") return "professional";
+  if (typeof window === "undefined") return "cyberpunk";
 
   const stored = localStorage.getItem(PALETTE_KEY);
   if (isPalette(stored)) return stored;
 
-  return "professional";
+  return "cyberpunk";
 }
 
 function applyTheme(theme: Theme, palette: Palette) {

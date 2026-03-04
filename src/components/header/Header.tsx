@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Moon, SunMedium } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
 import { useTheme } from "@/hooks/useTheme";
 import HeaderNav from "./Navigation";
 import MobileMenuButton from "./mobile/MobileMenuButton";
@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme, palette, setPalette } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="sticky top-0 z-20 border-b border-border-subtle bg-background/80 backdrop-blur">
@@ -35,6 +35,7 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-2">
+              {/* Palette switcher - default is cyberpunk
               <Select
                 value={palette}
                 onValueChange={(value) =>
@@ -57,6 +58,7 @@ const Header = () => {
                   <SelectItem value="playful">Playful</SelectItem>
                 </SelectContent>
               </Select>
+              */}
 
               <button
                 type="button"
