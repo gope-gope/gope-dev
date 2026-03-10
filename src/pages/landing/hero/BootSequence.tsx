@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 const bootLines = [
   "Initializing portfolio...",
-  "Loading frontend modules...",
+  "Loading core modules...",
   "Compiling components...",
   "Optimizing performance...",
-  "Frontend Systems Online.",
+  "Systems Online.",
 ];
 
 interface BootSequenceProps {

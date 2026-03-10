@@ -18,21 +18,19 @@ export default function Hero() {
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-5xl font-bold leading-tight">
             Hi, I'm{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
               George
             </span>
           </h1>
 
-          <h2 className="mt-4 text-xl md:text-2xl text-gray-300">
-            I build high-performance, visually stunning web experiences.
+          <h2 className="mt-4 text-5xl md:text-5xl text-red-600 font-bold">
+            A Frontend Developer
           </h2>
 
-          <p className="mt-6 text-gray-400 max-w-lg">
-            Frontend-focused Web Developer specializing in modern React
-            applications, responsive design, and conversion-driven user
-            experiences. I turn ideas into scalable digital products.
+          <p className="mt-6 text-white text-4xl max-w-lg">
+            with fullstack capabilities
           </p>
 
           <div className="mt-8 flex gap-4">
