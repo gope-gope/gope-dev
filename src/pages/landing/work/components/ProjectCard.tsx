@@ -8,24 +8,6 @@ function ProjectCard({ project }: { project: Project }) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const image = imageRef.current;
-    if (!image) return;
-
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    // Subtle parallax movement
-    gsap.to(image, {
-      x: x * 0.03,
-      y: y * 0.03,
-      duration: 0.4,
-      ease: "power3.out",
-    });
-  };
-
   const handleEnter = () => {
     gsap.to(overlayRef.current, {
       opacity: 0,
@@ -64,10 +46,9 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Link to={`/project/${project.id}`} className="block">
       <div
-        onMouseMove={handleMouseMove}
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
-        className="flex items-center justify-center relative h-[480px] rounded-2xl overflow-hidden cursor-pointer"
+        className="flex items-center justify-center relative h-[480px] overflow-hidden cursor-pointer border-r"
       >
         {/* Slightly zoomed image by default */}
         {project.logo ? (
@@ -75,7 +56,7 @@ function ProjectCard({ project }: { project: Project }) {
             ref={imageRef}
             src={project.logo}
             alt={project.title}
-            className="w-[100%] h-[100%] max-w-[75%] max-h-[50%] object-contain scale-110"
+            className="w-[100%] h-[100%] max-w-[75%] max-h-[50%] object-contain"
           />
         ) : (
           <div className="text-[100px] font-bold"> {`{ ... }`}</div>

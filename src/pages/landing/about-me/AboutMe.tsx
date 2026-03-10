@@ -12,7 +12,7 @@ const AboutMe = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="bg-gray-900 text-white py-36 px-6 md:px-12"
+      className="bg-gray-900 text-white py-36 px-6 md:px-12 border-t"
     >
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section Header */}

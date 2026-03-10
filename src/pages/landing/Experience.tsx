@@ -75,69 +75,73 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="pt-36 max-w-7xl w-[100%] mx-auto px-6 md:px-12"
+      className="py-18 w-[100%] mx-auto px-6 md:px-12 border-t"
     >
-      <h1 className="text-5xl font-extrabold mb-16 text-primary">Experience</h1>
+      <div className="mx-auto max-w-7xl">
+        <h1 className="text-5xl font-extrabold mb-16 text-primary">
+          Experience
+        </h1>
 
-      <div className="flex gap-20">
-        {/* LEFT NAV */}
-        <nav className="flex flex-col border-l-4 border-red-600 relative">
-          {DATA.map((item, index) => (
-            <button
-              key={item.title}
-              onClick={() => setActive(index)}
-              className={`relative py-12 pl-8 text-left text-lg cursor-pointer focus:outline-none
+        <div className="flex gap-20">
+          {/* LEFT NAV */}
+          <nav className="flex flex-col border-l-4 border-red-600 relative">
+            {DATA.map((item, index) => (
+              <button
+                key={item.title}
+                onClick={() => setActive(index)}
+                className={`relative py-12 pl-8 text-left text-lg cursor-pointer focus:outline-none
                 ${
                   active === index
                     ? "text-red-600 font-semibold"
                     : "text-primary"
                 }`}
-            >
-              {item.title}
-              {/* Underline */}
-              <span
-                className={`block absolute bottom-[0px] left-0 h-[2px] bg-red-600 transition-[width] duration-300 ease-in-out ${
-                  active === index ? "w-full" : "w-0"
-                }`}
-              />
-            </button>
-          ))}
-        </nav>
+              >
+                {item.title}
+                {/* Underline */}
+                <span
+                  className={`block absolute bottom-[0px] left-0 h-[2px] bg-red-600 transition-[width] duration-300 ease-in-out ${
+                    active === index ? "w-full" : "w-0"
+                  }`}
+                />
+              </button>
+            ))}
+          </nav>
 
-        {/* RIGHT CONTENT */}
-        <div className="mx-auto max-w-xl">
-          <p className="italic mb-6">{DATA[active].date}</p>
-          {DATA[active].link ? (
-            <a
-              className="flex gap-2 items-center text-xl font-bold mb-6"
-              href={DATA[active].link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {DATA[active].title} <ExternalLink height={20} width={20} />
-            </a>
-          ) : (
-            <p className="flex gap-2 items-center text-xl font-bold mb-6 text-primary">
-              {DATA[active].title}
-            </p>
-          )}
-          <p className="mb-6 leading-relaxed">{DATA[active].content}</p>
+          {/* RIGHT CONTENT */}
+          <div className="mx-auto max-w-xl">
+            <p className="italic mb-6">{DATA[active].date}</p>
+            {DATA[active].link ? (
+              <a
+                className="flex gap-2 items-center text-xl font-bold mb-6"
+                href={DATA[active].link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {DATA[active].title} <ExternalLink height={20} width={20} />
+              </a>
+            ) : (
+              <p className="flex gap-2 items-center text-xl font-bold mb-6 text-primary">
+                {DATA[active].title}
+              </p>
+            )}
+            <p className="mb-6 leading-relaxed">{DATA[active].content}</p>
 
-          {DATA[active].bullets && (
-            <div className="flex flex-col gap-2">
-              <p>My Responsibilities:</p>
-              <ul className="list-none p-0">
-                {DATA[active].bullets.map((bullet, idx) => (
-                  <li
-                    key={idx}
-                    className="relative mb-2 pl-5 before:absolute before:left-0 before:top-0 before:text-red-600 before:font-bold before:content-['+']"
-                  >
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+            {DATA[active].bullets && (
+              <div className="flex flex-col gap-2">
+                <p>My Responsibilities:</p>
+                <ul className="list-none p-0">
+                  {DATA[active].bullets.map((bullet, idx) => (
+                    <li
+                      key={idx}
+                      className="relative mb-2 pl-5 before:absolute before:left-0 before:top-0 before:text-red-600 before:font-bold before:content-['+']"
+                    >
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

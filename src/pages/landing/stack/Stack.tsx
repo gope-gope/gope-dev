@@ -101,59 +101,58 @@ const Stack = () => {
   }, [active]);
 
   return (
-    <section
-      id="stack"
-      className="mx-auto pt-36 px-6 md:px-12 max-w-4xl w-full"
-    >
-      <h2 className="text-5xl font-bold mb-16 text-center text-primary">
-        {`{ Stack }`}
-      </h2>
-      <div className="space-y-4 w-full">
-        {STACK_DATA.map(({ title, bgColor, skills }, index) => {
-          const isActive = active === index;
-          return (
-            <div
-              key={title}
-              className={`rounded-xl shadow-lg cursor-pointer select-none p-4
+    <section id="stack" className="mx-auto py-18 pb-36 px-6 md:px-12  w-full">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-5xl font-bold mb-16 text-center text-primary">
+          {`{ Stack }`}
+        </h2>
+        <div className="space-y-4 w-full">
+          {STACK_DATA.map(({ title, bgColor, skills }, index) => {
+            const isActive = active === index;
+            return (
+              <div
+                key={title}
+                className={`rounded-xl shadow-lg cursor-pointer select-none p-4
                 border-2 transition-colors duration-300
                 ${isActive ? "border-transparent" : "border-gray-300"}
                 ${isActive ? bgColor : "bg-white"}
                 ${isActive ? "text-white" : "text-black"}
                  `}
-              onClick={() => setActive(index === active ? null : index)}
-            >
-              {/* Header */}
-              <div className="font-semibold text-xl">{title}</div>
-
-              {/* Expandable content */}
-              <div
-                /* @ts-expect-error index can be used to access object projerty */
-                ref={(el) => (contentRefs.current[index] = el)}
-                className="overflow-hidden text-sm opacity-0"
-                style={{ height: 0, paddingTop: 0, paddingBottom: 0 }}
+                onClick={() => setActive(index === active ? null : index)}
               >
-                <div className="flex flex-wrap gap-8 py-8">
-                  {skills.map((skill) => (
-                    <div
-                      key={skill.title}
-                      className="flex flex-col gap-2 items-center"
-                    >
-                      {skill.isSvg ? (
-                        <skill.Icon width={64} height={64} />
-                      ) : (
-                        <img
-                          className="w-[64px] h-[64px]"
-                          src={skill.Icon as string}
-                        />
-                      )}
-                      <div className="text-center">{skill.title}</div>
-                    </div>
-                  ))}
+                {/* Header */}
+                <div className="font-semibold text-xl">{title}</div>
+
+                {/* Expandable content */}
+                <div
+                  /* @ts-expect-error index can be used to access object projerty */
+                  ref={(el) => (contentRefs.current[index] = el)}
+                  className="overflow-hidden text-sm opacity-0"
+                  style={{ height: 0, paddingTop: 0, paddingBottom: 0 }}
+                >
+                  <div className="flex flex-wrap gap-8 py-8">
+                    {skills.map((skill) => (
+                      <div
+                        key={skill.title}
+                        className="flex flex-col gap-2 items-center"
+                      >
+                        {skill.isSvg ? (
+                          <skill.Icon width={64} height={64} />
+                        ) : (
+                          <img
+                            className="w-[64px] h-[64px]"
+                            src={skill.Icon as string}
+                          />
+                        )}
+                        <div className="text-center">{skill.title}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

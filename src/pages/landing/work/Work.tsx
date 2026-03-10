@@ -14,17 +14,17 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="relative w-full text-white pt-36 overflow-hidden px-6 md:px-12"
+      className="relative w-full text-white py-18 overflow-hidden border-t"
     >
-      <div className="max-w-7xl mx-auto relative">
-        <h2 className="text-5xl font-bold mb-16 text-primary text-right">
+      <div className="mx-auto relative ">
+        <h2 className="text-5xl font-bold mb-16 text-primary text-right max-w-7xl mx-auto">
           Work
         </h2>
 
         <Swiper
-          className="rounded-[16px]"
+          className="border-b border-t"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={32}
+          spaceBetween={0}
           slidesPerView={2.5}
           loop={true}
           speed={800}
