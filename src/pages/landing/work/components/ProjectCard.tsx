@@ -59,7 +59,10 @@ function ProjectCard({ project }: { project: Project }) {
             className="w-[100%] h-[100%] max-w-[75%] max-h-[50%] object-contain"
           />
         ) : (
-          <div className="text-[100px] font-bold"> {`{ ... }`}</div>
+          <div className="text-[32px] md:text-[100px] font-bold">
+            {" "}
+            {`{ ... }`}
+          </div>
         )}
 
         {/* Dark overlay */}

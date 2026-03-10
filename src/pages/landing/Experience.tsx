@@ -82,21 +82,21 @@ const Experience = () => {
           Experience
         </h1>
 
-        <div className="flex gap-20">
+        <div className="flex gap-4 lg:gap-20">
           {/* LEFT NAV */}
           <nav className="flex flex-col border-l-4 border-red-600 relative">
             {DATA.map((item, index) => (
               <button
                 key={item.title}
                 onClick={() => setActive(index)}
-                className={`relative py-12 pl-8 text-left text-lg cursor-pointer focus:outline-none
+                className={`relative py-4 lg:py-12 pl-4 lg:pl-8 px-4 text-left text-lg cursor-pointer focus:outline-none
                 ${
                   active === index
                     ? "text-red-600 font-semibold"
                     : "text-primary"
                 }`}
               >
-                {item.title}
+                {window.innerWidth < 650 ? index + 1 : item.title}
                 {/* Underline */}
                 <span
                   className={`block absolute bottom-[0px] left-0 h-[2px] bg-red-600 transition-[width] duration-300 ease-in-out ${

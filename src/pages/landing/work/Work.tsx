@@ -17,7 +17,7 @@ const Work = () => {
       className="relative w-full text-white py-18 overflow-hidden border-t"
     >
       <div className="mx-auto relative ">
-        <h2 className="text-5xl font-bold mb-16 text-primary text-right max-w-7xl mx-auto">
+        <h2 className="text-5xl font-bold mb-16 text-primary text-right max-w-7xl mx-auto px-6">
           Work
         </h2>
 
