@@ -142,6 +142,7 @@ const Stack = () => {
                           <img
                             className="w-[64px] h-[64px]"
                             src={skill.Icon as string}
+                            loading="lazy"
                           />
                         )}
                         <div className="text-center">{skill.title}</div>
