@@ -28,7 +28,7 @@ const AboutMe = () => {
               className="text-lg md:text-xl leading-relaxed"
               scrollTriggerTarget={sectionRef}
             >
-              I’m a frontend developer passionate about building engaging and
+              I’m a web developer passionate about building engaging and
               intuitive digital experiences. Over the past few years, I’ve
               helped bring a variety of projects to life — from innovative DeFi
               platforms and NFT marketplaces to e-commerce experiences for

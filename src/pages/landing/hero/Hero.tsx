@@ -26,11 +26,11 @@ export default function Hero() {
           </h1>
 
           <h2 className="mt-4 text-5xl md:text-5xl text-red-600 font-bold">
-            A Frontend Developer
+            Web Developer
           </h2>
 
           <p className="mt-6 text-white text-4xl max-w-lg">
-            with fullstack capabilities
+            delivering across the stack
           </p>
 
           <div className="mt-8 flex gap-4">
